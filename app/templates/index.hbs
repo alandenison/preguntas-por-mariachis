@@ -1,3 +1,9 @@
 <h1>PREGUNTAS MARIACHI</h1>
 
 <h2>si te quieres conocer el mundo extravagante de las Mariachis, ¡LLEGASTE AL MEJOR LURGAR!!</h2>
+
+<ul>
+  {{#each model as |pregunta|}}
+     <li>{{pregunta.usuario}} preguntó: {{pregunta.cunsulta}}</li>
+  {{/each}}
+</ul>
