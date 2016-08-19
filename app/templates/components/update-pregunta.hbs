@@ -1,0 +1,21 @@
+
+{{#if updatePreguntaForm}}
+  <h4>Revisar la pregunta de {{pregunta.usuario}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="usuario">Nombre de usuario</label>
+        {{input value=usuario id="usuario" placeholder=pregunta.usuario}}
+      </div>
+
+      <div class="form-group">
+        <label for="type">Pregunta</label>
+        {{input value=consulta id="consulta" placeholder=pregunta.consulta}}
+      </div>
+
+      <button {{action 'update' pregunta}}>Enviar sus cambios</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updatePreguntaForm'}}>Revisar</button>
+{{/if}}

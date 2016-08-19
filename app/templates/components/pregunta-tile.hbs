@@ -1,4 +1,5 @@
 <li>
   {{pregunta.usuario}} PREGUNTÓ: {{pregunta.consulta}}
+  {{update-pregunta pregunta=pregunta update="update"}}
   <button {{action 'delete' pregunta}}>Delete</button>
 </li>

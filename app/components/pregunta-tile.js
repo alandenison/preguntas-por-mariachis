@@ -6,6 +6,9 @@ export default Ember.Component.extend({
       if (confirm('¿está seguro quiere borrar esto?')) {
         this.sendAction('destroyPregunta', pregunta);
       }
+    },
+    update(pregunta, params) {
+      this.sendAction('update', pregunta, params);
     }
   }
 });
