@@ -4,6 +4,6 @@
 
 <ul>
   {{#each model as |pregunta|}}
-     <li>{{pregunta.usuario}} preguntó: {{pregunta.cunsulta}}</li>
+     {{pregunta-tile pregunta=pregunta}}
   {{/each}}
 </ul>
