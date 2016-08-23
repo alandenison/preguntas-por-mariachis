@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         usuario: this.get('usuario'),
         consulta: this.get('consulta'),
       };
-      this.set('addNewRental', false);
+      this.set('addNewPregunta', false);
       this.sendAction('save2', params);
     }
   }
