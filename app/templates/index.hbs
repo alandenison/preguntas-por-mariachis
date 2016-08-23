@@ -1,7 +1,7 @@
 
 
 <ul>
-  {{#each model as |pregunta|}}
+  {{#each model.preguntas as |pregunta|}}
      {{pregunta-tile pregunta=pregunta update="update" destroyPregunta="destroyPregunta"}}
   {{/each}}
 </ul>
