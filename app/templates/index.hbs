@@ -1,9 +1,9 @@
 
-
+<h2>Preguntas abiertas</h2>
 <ul>
   {{#each model.preguntas as |pregunta|}}
-     {{pregunta-tile pregunta=pregunta update="update" destroyPregunta="destroyPregunta"}}
+     {{pregunta-tile pregunta=pregunta}}
   {{/each}}
 </ul>
 
-{{new-pregunta save2="save3"}}
+{{new-pregunta savePregunta="savePregunta"}}
