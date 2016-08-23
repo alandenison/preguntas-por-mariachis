@@ -22,6 +22,16 @@ export default Ember.Route.extend({
       return pregunta.destroyRecord();
     });
     this.transitionTo('index');
-    }
+    },
+    update(pregunta, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          debugger;
+          pregunta.set(key,params[key]);
+        }
+      });
+      pregunta.save();
+      this.transitionTo('index');
+    },
   }
 });

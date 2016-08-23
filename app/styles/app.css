@@ -1,0 +1,9 @@
+.jumbotron {
+  background-image: url(http://0.tqn.com/d/gomexico/1/S/0/a/-/-/mariachi_getty.jpg);
+  color: black;
+  height: 300px
+}
+.jumbotron h1, .jumbotron h2 {
+  background: rgba(76, 175, 80, 0.7);
+  width: 420px;
+}

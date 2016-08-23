@@ -10,6 +10,7 @@ export default Ember.Component.extend({
       var params = {
         usuario: this.get('usuario'),
         consulta: this.get('consulta'),
+        nota: this.get('nota'),
       };
       this.set('updatePreguntaForm', false);
       this.sendAction('update', pregunta, params);
