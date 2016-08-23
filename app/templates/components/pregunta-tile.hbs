@@ -1,5 +1,10 @@
-<li>
+
   {{pregunta.usuario}} PREGUNTÓ: {{pregunta.consulta}}
-  {{update-pregunta pregunta=pregunta update="update"}}
-  <button {{action 'delete' pregunta}}>Delete</button>
-</li>
+
+  <h2>RESPUESTAS:</h2>
+  <ul>
+  {{#each city.answers as |answer|}}
+    <li>{{#link-to 'answer' answer.id}}{{answer.owner}}'s {{answer.type}} in {{answer.city.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+  <button {{action 'destroyPregunta' pregunta}}>Borrar</button>

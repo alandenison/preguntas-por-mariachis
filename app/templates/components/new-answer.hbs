@@ -1,1 +1,19 @@
-{{yield}}
+{{#if addNewAnswer}}
+  <h1>Contestar la pregunta aquí</h1>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="contestador">Su Nombre</label>
+          {{input value=contestador id="contestador"}}
+        </div>
+
+        <div class="form-group">
+          <label for="answer">Su Respuesta</label>
+          {{input value=answer id="answer"}}
+        </div>
+        <button {{action 'save1'}}>enviar su respuesta</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'newAnswerFormShow'}}>Nueva Respuesta</button>
+{{/if}}
