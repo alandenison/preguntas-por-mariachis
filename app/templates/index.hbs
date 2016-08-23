@@ -2,8 +2,8 @@
 <h2>Preguntas abiertas</h2>
 <ul>
   {{#each model.preguntas as |pregunta|}}
-     {{pregunta-tile pregunta=pregunta}}
+     <li>{{#link-to 'pregunta' pregunta.id}} {{pregunta.usuario}} preguntó: {{pregunta.consulta}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
-{{new-pregunta savePregunta="savePregunta"}}
+{{new-pregunta save2="savePregunta"}}

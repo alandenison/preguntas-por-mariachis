@@ -8,8 +8,8 @@ export default Ember.Component.extend({
     },
     save1() {
       var params = {
-        usuario: this.get('usuario'),
-        consulta: this.get('consulta'),
+        usuario: this.get('usuario') ? this.get('usuario') : "",
+        consulta: this.get('consulta') ? this.get('consulta') : "",
       };
       this.set('addNewPregunta', false);
       this.sendAction('save2', params);

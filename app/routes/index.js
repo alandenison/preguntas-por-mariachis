@@ -7,10 +7,11 @@ export default Ember.Route.extend({
       answers: this.store.findAll('answer')
    });
   },
+
     actions: {
     save3(params) {
-      var newPregunta = this.store.createRecord('pregunta', params);
-      newPregunta.save();
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
       this.transitionTo('index');
     },
     savePregunta(params) {
@@ -18,4 +19,5 @@ export default Ember.Route.extend({
       newPregunta.save();
       this.transitionTo('index');
     }
+  }
 });

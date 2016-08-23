@@ -1,10 +1,9 @@
 
   {{pregunta.usuario}} PREGUNTÓ: {{pregunta.consulta}}
 
-  <h2>RESPUESTAS:</h2>
   <ul>
-  {{#each city.answers as |answer|}}
-    <li>{{#link-to 'answer' answer.id}}{{answer.owner}}'s {{answer.type}} in {{answer.city.name}}{{/link-to}}</li>
-  {{/each}}
-</ul>
-  <button {{action 'destroyPregunta' pregunta}}>Borrar</button>
+    {{#each pregunta.answers as |answer|}}
+      <li>{{#link-to 'answer' answer.id}}{{answer.contestador}} {{/link-to}}Contestó: {{answer.respuesta}}</li>
+    {{/each}}
+  </ul>
+  <button {{action 'destroyPregunta' pregunta}}>Borrar la pregunta</button>

@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewPregunta: false,
+  addNewAnswer: false,
   actions: {
     answerFormShow() {
-      this.set('addNewPregunta', true);
+      this.set('addNewAnswer', true);
     },
     save1() {
       var params = {
@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         respuesta: this.get('respuesta') ? this.get('respuesta') : "",
         pregunta: this.get('pregunta') ? this.get('pregunta') : "",
       };
-      this.set('addNewPregunta', false);
+      this.set('addNewAnswer', false);
       this.sendAction('save2', params);
     }
   }

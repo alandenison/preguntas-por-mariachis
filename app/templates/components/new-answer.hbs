@@ -8,12 +8,12 @@
         </div>
 
         <div class="form-group">
-          <label for="answer">Su Respuesta</label>
-          {{input value=answer id="answer"}}
+          <label for="respuesta">Su Respuesta</label>
+          {{input value=respuesta id="respuesta"}}
         </div>
         <button {{action 'save1'}}>enviar su respuesta</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'newAnswerFormShow'}}>Nueva Respuesta</button>
+    <button {{action 'answerFormShow'}}>Nueva Respuesta</button>
 {{/if}}
