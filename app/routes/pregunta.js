@@ -26,7 +26,6 @@ export default Ember.Route.extend({
     update(pregunta, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-          debugger;
           pregunta.set(key,params[key]);
         }
       });
